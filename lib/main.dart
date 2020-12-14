@@ -16,37 +16,42 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome App"),
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          // color: Colors.red,
-          width: 100,
-          height: 100,
-          // clipBehavior: Clip.antiAlias,
-          alignment: Alignment.topLeft,
-          decoration: BoxDecoration(
+      body: Container(
+        height: 100,
+        // width: 500,
+        color: Colors.teal[100],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              // color: Colors.red,
+              width: 100,
+              height: 100,
               color: Colors.red,
-              // shape: BoxShape.circle,
-              borderRadius: BorderRadius.circular(10),
-              gradient: LinearGradient(colors: [
-                Colors.pink,
-                Colors.yellow,
-              ]),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey[900],
-                  blurRadius: 10,
-                )
-              ]),
-          child: Text(
-            "I am a box ",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+              // clipBehavior: Clip.antiAlias,
+              alignment: Alignment.topLeft,
             ),
-          ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              // color: Colors.red,
+              width: 100,
+              height: 100,
+              color: Colors.yellow,
+              // clipBehavior: Clip.antiAlias,
+              alignment: Alignment.topLeft,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              // color: Colors.red,
+              width: 100,
+              height: 100,
+              color: Colors.green,
+              // clipBehavior: Clip.antiAlias,
+              alignment: Alignment.topLeft,
+            ),
+          ],
         ),
       ),
     );
