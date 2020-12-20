@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mtechtutorial/drawer.dart';
+import 'package:mtechtutorial/widgets/drawer.dart';
 import 'package:http/http.dart' as http;
 import 'package:mtechtutorial/pages/login_page.dart';
 import 'dart:convert';
-
-import 'package:mtechtutorial/utils/constants.dart';
 import 'package:mtechtutorial/utils/constants.dart';
 // import 'package:mtechtutorial/name_card_widget.dart';
 
