@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mtechtutorial/drawer.dart';
 import 'package:http/http.dart' as http;
+import 'package:mtechtutorial/pages/login_page.dart';
 import 'dart:convert';
+
+import 'package:mtechtutorial/utils/constants.dart';
+import 'package:mtechtutorial/utils/constants.dart';
 // import 'package:mtechtutorial/name_card_widget.dart';
 
 class Homepage extends StatefulWidget {
+  static const String routeName = "/home";
   @override
   _HomepageState createState() => _HomepageState();
 }
@@ -35,6 +40,15 @@ class _HomepageState extends State<Homepage> {
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text("Awesome App"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {
+              Constants.prefs.setBool("loggedIn", false);
+              Navigator.pushReplacementNamed(context, LoginPage.routeName);
+            },
+          )
+        ],
       ),
       body: data != null
           ? ListView.builder(
