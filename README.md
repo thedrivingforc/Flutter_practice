@@ -1,4 +1,4 @@
-# mtechtutorial
+# flutter_getting_started
 
 A new Flutter project.
 
